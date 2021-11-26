@@ -1,0 +1,982 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+#header{
+
+    height: 100vh;
+    background-image: url('https://i.ibb.co/HNvHSyV/image-header.jpg');
+    background-position: center bottom;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+
+    nav {
+
+        #brand {
+            float: left;
+            display: block;
+            margin-left: 40px;
+            font-size: 20px;
+            font-family: 'Shippori Antique', sans-serif;
+            color: white;
+            letter-spacing: .1rem;
+            line-height: 30px;
+        }
+        #menu {
+            float: left;
+            left: 45%;
+            position: relative;
+            li {
+                display: inline-block;
+                padding: 0px 28px;
+                cursor: pointer;
+                line-height: 60px;
+                position: relative;
+                transition: all 0.3s ease-out;
+                a {
+                    color: #fff;
+                    font-size: 20px;
+                    font-family: 'Shippori Antique', sans-serif;
+                    letter-spacing: .1rem;
+                    font-weight: 200;
+                    text-decoration: none;
+                }
+                .btn{
+                    font-size: 16px;
+                    font-family: 'Shippori Antique', sans-serif;
+                    padding: 8px 24px;
+                    border-radius: 3rem;
+                    background-color: white;
+                    border: 1px solid white;
+                    color: black;
+                }
+            }
+        }
+    }
+    #toggle {
+        position: absolute;
+        right: 20px;
+        top: 14px;
+        z-index: 999;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        float: right;
+        transition: all 0.3s ease-out;
+        visibility: hidden;
+        opacity: 0;
+        .span {
+            height: 2.8px;
+            background: #fff;
+            transition: all 0.3s ease-out;
+            backface-visibility: hidden;
+            margin: 5px auto;
+        }
+    }
+    #toggle.on {
+        #one {
+            transform: rotate(45deg) translateX(2px) translateY(4px);
+        }
+        #two {
+            opacity: 0;
+        }
+        #three {
+            transform: rotate(-45deg) translateX(8px) translateY(-10px);
+        }
+    }
+    #resize {
+        z-index: 1;
+        position: absolute;
+        top: 0px;
+        background: #000;
+        width: 100%;
+        height: 102%;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 1s ease-out;
+        display: table;
+        #menu {
+            height: 90px;
+            display: table-cell;
+            vertical-align: center;
+            li {
+                display: block;
+                text-align: center;
+                padding: 40px;
+                min-height: 50px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: all .1s ease-out;
+                a {
+                    color: #fff;
+                    font-size: 20px;
+                    font-family: 'Shippori Antique', sans-serif;
+                    letter-spacing: .1rem;
+                    font-weight: 200;
+                    text-decoration: none;
+                }
+                .btn{
+                    font-size: 16px;
+                    font-family: 'Shippori Antique', sans-serif;
+                    padding: 8px 24px;
+                    border-radius: 3rem;
+                    background-color: white;
+                    border: 1px solid white;
+                    color: black;
+                }
+            }
+        }
+        li {
+            &:nth-child(1) {
+                margin-top: 10px;
+            }
+        }
+    }
+    #resize.active {
+        visibility: visible;
+        opacity: 0.99;
+    }
+    
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: -18%;
+        font-size: 74px;
+        flex-grow: 1;
+        color: white;
+        font-weight: bold;
+        letter-spacing: 8px;
+    }
+    .arrow {
+        margin-top: 80px;
+    }
+    
+}
+
+.second-container{
+
+    .one{
+
+        &-flex{
+            display: flex;
+
+            .one{
+
+                &-left{
+                    flex-basis: 50%;
+
+                    .heading{
+                        padding: 20vh 10vh;
+
+                        h2{
+                            width: 60%;
+                            font-size: 42px;
+                            font-family: 'PT Serif', serif;
+                        }
+
+                        p{
+                            width: 64%;
+                            font-family: 'Shippori Antique', sans-serif;
+                        }
+
+                        a{
+                            font-family: 'Libre Baskerville', serif;
+                            font-weight: 800;
+                            font-size: 18px;
+                            color: black;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            border-bottom: 4px solid yellow;
+                        }
+                    }
+                }
+
+                &-right{
+                    flex-basis: 50%;
+
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .two{
+
+        &-flex{
+            display: flex;
+
+            .two{
+
+                &-left{
+                    flex-basis: 50%;
+                    
+                    img{
+                        width: 100%;
+                    }
+                }
+
+                &-right{
+                    flex-basis: 50%;
+
+                    .heading{
+                        padding: 10vh 20vh;
+
+                        h2{
+                            width: 70%;
+                            font-size: 42px;
+                            font-family: 'PT Serif', serif;
+                        }
+
+                        p{
+                            width: 98%;
+                            font-family: 'Shippori Antique', sans-serif;
+                        }
+
+                        a{
+                            font-family: 'Libre Baskerville', serif;
+                            font-weight: 800;
+                            font-size: 18px;
+                            color: black;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            border-bottom: 4px solid plum;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.third-container{
+    margin-top: -1%;
+
+    .third{
+
+        &-flex{
+            display: flex;
+
+            img{
+                width: 120%;
+            }
+        }
+    }
+}
+
+
+.fourth-container{
+
+    h3{
+        margin: 6% 0%;
+        font-family: 'Shippori Antique', sans-serif;
+        color: gray;
+        font-size: 26px;
+        letter-spacing: 3px;
+        text-align: center;
+    }
+
+    .fourth{
+
+        &-flex{
+            display: flex;
+            text-align: center;
+
+            .fourth{
+
+                &-left{
+                    flex-basis: 50%;
+
+                    h2{
+                        margin: 6% 0%;
+                    }
+
+                    p{
+                        margin-left: 24%;
+                        width: 50%;
+                        font-family: 'Shippori Antique', sans-serif;
+                    }
+                }
+                &-middle{
+                    flex-basis: 50%;
+
+                    h2{
+                        margin: 6% 0%;
+                    }
+
+                    p{
+                        margin-left: 24%;
+                        width: 50%;
+                        font-family: 'Shippori Antique', sans-serif;
+                    }
+                }
+                &-right{
+                    flex-basis: 50%;
+
+                    h2{
+                        margin: 8% 0%;
+                    }
+
+                    p{
+                        margin-left: 26%;
+                        width: 50%;
+                        font-family: 'Shippori Antique', sans-serif;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.fifth-container{
+    margin-top: 8%;
+
+    .fifth{
+
+        &-flex{
+            display: flex;
+
+            img{
+                width: 25%;
+            }
+        }
+    }
+}
+
+.footer-container{
+    background-color: #90D4C5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .footer{
+
+        &-heading{
+            margin-left: 1%;
+            font-size: 18px;
+            font-family: 'Shippori Antique', sans-serif;
+            color: #2D7465;
+        }
+
+        &-links{
+            display: flex;
+
+            ul{
+                display: flex;
+
+                li{
+                    list-style: none;
+
+                    a {
+                        color: #2D7465;
+                        text-decoration: none;
+                        font-family: 'Shippori Antique', sans-serif;
+                        font-size: 18px;
+                        letter-spacing: 3px;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+
+        &-social{
+            margin-left: 1%;
+
+            img{
+                margin: 20% 0%;
+                padding: 1px;
+                width: 20%;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    #header{
+
+        nav {
+
+            #brand {
+                margin-left: 4%;
+                font-size: 16px;
+            }
+            #menu {
+                float: left;
+                left: 40%;
+                position: relative;
+                li {
+                    display: inline-block;
+                    padding: 0px 10px;
+                    cursor: pointer;
+                    line-height: 46px;
+                    position: relative;
+
+                    a{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .main {
+            font-size: 64px;
+            margin-top: -18%;
+        }
+        .arrow {
+            margin-top: 60px;
+        }
+    }
+
+    .second-container{
+
+        .one{
+    
+            &-flex{
+    
+                .one{
+    
+                    &-left{
+    
+                        .heading{
+                            padding: 10vh 12vh;
+    
+                            h2{
+                                width: 80%;
+                                font-size: 36px;
+                            }
+    
+                            p{
+                                width: 100%;
+                            }
+                        }
+                    }
+    
+                    &-right{
+    
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .two{
+    
+            &-flex{
+    
+                .two{
+    
+                    &-left{
+                        
+                        img{
+                            width: 100%;
+                        }
+                    }
+    
+                    &-right{
+                        flex-basis: 50%;
+    
+                        .heading{
+                            padding: 4vh 12vh;
+    
+                            h2{
+                                width: 80%;
+                                font-size: 36px;
+                            }
+    
+                            p{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .third-container{
+
+        .third{
+
+            &-flex{
+
+                img{
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    .fourth-container{
+    
+        .fourth{
+    
+            &-flex{
+    
+                .fourth{
+    
+                    &-left{
+    
+                        p{
+                            margin: 13% 5%;
+                            width: 90%;
+                            font-size: 16px;
+                        }
+                    }
+                    &-middle{
+    
+                        p{
+                            margin: 13% 5%;
+                            width: 90%;
+                            font-size: 16px;
+                        }
+                    }
+                    &-right{
+    
+                        p{
+                            margin: 13% 5%;
+                            width: 90%;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 800px) {
+
+    #header{
+
+        nav {
+
+            #brand {
+                margin-left: 4%;
+                font-size: 16px;
+            }
+            #menu {
+                float: left;
+                left: 24%;
+                position: relative;
+                li {
+                    display: inline-block;
+                    padding: 0px 10px;
+                    cursor: pointer;
+                    line-height: 46px;
+                    position: relative;
+
+                    a{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .main {
+            font-size: 60px;
+        }
+        .arrow {
+            margin-top: 60px;
+        }
+    }
+
+    .second-container{
+
+        .one{
+    
+            &-flex{
+    
+                .one{
+    
+                    &-left{
+    
+                        .heading{
+                            padding: 0vh 12vh;
+    
+                            h2{
+                                width: 100%;
+                                font-size: 32px;
+                            }
+    
+                            p{
+                                width: 130%;
+                            }
+                        }
+                    }
+    
+                    &-right{
+    
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .two{
+    
+            &-flex{
+    
+                .two{
+    
+                    &-left{
+                        
+                        img{
+                            width: 100%;
+                        }
+                    }
+    
+                    &-right{
+                        flex-basis: 50%;
+    
+                        .heading{
+                            margin-top: -4%;
+                            padding: 0vh 12vh;
+    
+                            h2{
+                                width: 100%;
+                                font-size: 32px;
+                            }
+    
+                            p{
+                                width: 130%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .third-container{
+
+        .third{
+
+            &-flex{
+
+                img{
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    .fourth-container{
+    
+        .fourth{
+    
+            &-flex{
+    
+                .fourth{
+    
+                    &-left{
+    
+                        p{
+                            margin: 13% 5%;
+                            width: 90%;
+                            font-size: 16px;
+                        }
+                    }
+                    &-middle{
+    
+                        p{
+                            margin: 11% 5%;
+                            width: 90%;
+                            font-size: 16px;
+                        }
+                    }
+                    &-right{
+    
+                        p{
+                            margin: 13% 5%;
+                            width: 90%;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media(max-width: 600px) {
+
+    #header{
+        #resize {
+            #menu {
+                li {
+                    a {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        nav {
+            #brand {
+                font-size: 18px;
+                line-height: 34px;
+                margin-left: 18px;
+            }
+            #menu {
+                display: none;
+            }
+        }
+        #toggle {
+            visibility: visible;
+            opacity: 1;
+            margin-top: 6px;
+        }
+        #menu {
+            a {
+                font-family: "Poppins";
+                font-weight: 200;
+                font-size: 20px;
+            }
+        }
+
+        .main {
+            margin-top: -55%;
+            font-size: 60px;
+            text-align: center;
+            letter-spacing: 4px;
+        }
+        .arrow {
+            margin-top: 60px;
+        }
+    }
+
+
+    .second-container{
+
+        .one{
+    
+            &-flex{
+                flex-direction: column-reverse;
+    
+                .one{
+    
+                    &-left{
+                        flex-basis: 50%;
+    
+                        .heading{
+                            padding: 6vh 12vh;
+                            text-align: center;
+    
+                            h2{
+                                width: 100%;
+                                font-size: 36px;
+                            }
+    
+                            p{
+                                width: 100%;
+                            }
+                        }
+                    }
+    
+                    &-right{
+                        flex-basis: 50%;
+    
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .two{
+    
+            &-flex{
+                display: block;
+    
+                .two{
+    
+                    &-left{
+                        flex-basis: 50%;
+                        
+                        img{
+                            width: 100%;
+                        }
+                    }
+    
+                    &-right{
+                        flex-basis: 50%;
+    
+                        .heading{
+                            padding: 6vh 12vh;
+                            text-align: center;
+    
+                            h2{
+                                width: 100%;
+                                font-size: 36px;
+                            }
+    
+                            p{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .third-container{
+
+        .third{
+
+            &-flex{
+                display: block;
+
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .fourth-container{
+
+        h3{
+            margin: 6% 0%;
+            font-family: 'Shippori Antique', sans-serif;
+            color: gray;
+            font-size: 26px;
+            letter-spacing: 3px;
+            text-align: center;
+        }
+    
+        .fourth{
+    
+            &-flex{
+                display: block;
+                text-align: center;
+    
+                .fourth{
+    
+                    &-left{
+                        flex-basis: 50%;
+    
+                        p{
+                            margin-left: 5%;
+                            width: 90%;
+                            font-size: 20px;
+                        }
+                    }
+                    &-middle{
+                        flex-basis: 50%;
+    
+                        p{
+                            margin-left: 10%;
+                            width: 80%;
+                            font-size: 20px;
+                        }
+                    }
+                    &-right{
+                        flex-basis: 50%;
+    
+                        p{
+                            margin-left: 5%;
+                            width: 90%;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .fifth-container{
+
+        .fifth{
+    
+            &-flex{
+                flex-wrap: wrap;
+
+                img{
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+
+    #header{
+
+        .main {
+            margin-top: -55%;
+            font-size: 56px;
+            text-align: center;
+            letter-spacing: 4px;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+
+    #header{
+
+        .main {
+            margin-top: -55%;
+            font-size: 48px;
+            text-align: center;
+            letter-spacing: 4px;
+        }
+    }
+
+    .footer-container{
+    
+        .footer{
+    
+            &-heading{
+                margin-left: 4%;
+                font-size: 16px;
+                font-family: 'Shippori Antique', sans-serif;
+                color: #2D7465;
+            }
+    
+            &-links{
+    
+                ul{
+    
+                    li{
+    
+                        a {
+                            font-size: 17px;
+                            padding: 6px;
+                        }
+                    }
+                }
+            }
+    
+            &-social{
+                margin-left: 1%;
+    
+                img{
+                    margin: 20% 0%;
+                    padding: 1px;
+                    width: 20%;
+                }
+            }
+        }
+    
+    }
+}

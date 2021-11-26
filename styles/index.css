@@ -1,0 +1,758 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+#header {
+  height: 100vh;
+  background-image: url("https://i.ibb.co/HNvHSyV/image-header.jpg");
+  background-position: center bottom;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#header nav #brand {
+  float: left;
+  display: block;
+  margin-left: 40px;
+  font-size: 20px;
+  font-family: 'Shippori Antique', sans-serif;
+  color: white;
+  letter-spacing: .1rem;
+  line-height: 30px;
+}
+
+#header nav #menu {
+  float: left;
+  left: 45%;
+  position: relative;
+}
+
+#header nav #menu li {
+  display: inline-block;
+  padding: 0px 28px;
+  cursor: pointer;
+  line-height: 60px;
+  position: relative;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+#header nav #menu li a {
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Shippori Antique', sans-serif;
+  letter-spacing: .1rem;
+  font-weight: 200;
+  text-decoration: none;
+}
+
+#header nav #menu li .btn {
+  font-size: 16px;
+  font-family: 'Shippori Antique', sans-serif;
+  padding: 8px 24px;
+  border-radius: 3rem;
+  background-color: white;
+  border: 1px solid white;
+  color: black;
+}
+
+#header #toggle {
+  position: absolute;
+  right: 20px;
+  top: 14px;
+  z-index: 999;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  float: right;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#header #toggle .span {
+  height: 2.8px;
+  background: #fff;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  margin: 5px auto;
+}
+
+#header #toggle.on #one {
+  -webkit-transform: rotate(45deg) translateX(2px) translateY(4px);
+          transform: rotate(45deg) translateX(2px) translateY(4px);
+}
+
+#header #toggle.on #two {
+  opacity: 0;
+}
+
+#header #toggle.on #three {
+  -webkit-transform: rotate(-45deg) translateX(8px) translateY(-10px);
+          transform: rotate(-45deg) translateX(8px) translateY(-10px);
+}
+
+#header #resize {
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  background: #000;
+  width: 100%;
+  height: 102%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  display: table;
+}
+
+#header #resize #menu {
+  height: 90px;
+  display: table-cell;
+  vertical-align: center;
+}
+
+#header #resize #menu li {
+  display: block;
+  text-align: center;
+  padding: 40px;
+  min-height: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all .1s ease-out;
+  transition: all .1s ease-out;
+}
+
+#header #resize #menu li a {
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Shippori Antique', sans-serif;
+  letter-spacing: .1rem;
+  font-weight: 200;
+  text-decoration: none;
+}
+
+#header #resize #menu li .btn {
+  font-size: 16px;
+  font-family: 'Shippori Antique', sans-serif;
+  padding: 8px 24px;
+  border-radius: 3rem;
+  background-color: white;
+  border: 1px solid white;
+  color: black;
+}
+
+#header #resize li:nth-child(1) {
+  margin-top: 10px;
+}
+
+#header #resize.active {
+  visibility: visible;
+  opacity: 0.99;
+}
+
+#header .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -18%;
+  font-size: 74px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 8px;
+}
+
+#header .arrow {
+  margin-top: 80px;
+}
+
+.second-container .one-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.second-container .one-flex .one-left {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.second-container .one-flex .one-left .heading {
+  padding: 20vh 10vh;
+}
+
+.second-container .one-flex .one-left .heading h2 {
+  width: 60%;
+  font-size: 42px;
+  font-family: 'PT Serif', serif;
+}
+
+.second-container .one-flex .one-left .heading p {
+  width: 64%;
+  font-family: 'Shippori Antique', sans-serif;
+}
+
+.second-container .one-flex .one-left .heading a {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 800;
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 4px solid yellow;
+}
+
+.second-container .one-flex .one-right {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.second-container .one-flex .one-right img {
+  width: 100%;
+}
+
+.second-container .two-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.second-container .two-flex .two-left {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.second-container .two-flex .two-left img {
+  width: 100%;
+}
+
+.second-container .two-flex .two-right {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.second-container .two-flex .two-right .heading {
+  padding: 10vh 20vh;
+}
+
+.second-container .two-flex .two-right .heading h2 {
+  width: 70%;
+  font-size: 42px;
+  font-family: 'PT Serif', serif;
+}
+
+.second-container .two-flex .two-right .heading p {
+  width: 98%;
+  font-family: 'Shippori Antique', sans-serif;
+}
+
+.second-container .two-flex .two-right .heading a {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 800;
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 4px solid plum;
+}
+
+.third-container {
+  margin-top: -1%;
+}
+
+.third-container .third-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.third-container .third-flex img {
+  width: 120%;
+}
+
+.fourth-container h3 {
+  margin: 6% 0%;
+  font-family: 'Shippori Antique', sans-serif;
+  color: gray;
+  font-size: 26px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.fourth-container .fourth-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.fourth-container .fourth-flex .fourth-left {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.fourth-container .fourth-flex .fourth-left h2 {
+  margin: 6% 0%;
+}
+
+.fourth-container .fourth-flex .fourth-left p {
+  margin-left: 24%;
+  width: 50%;
+  font-family: 'Shippori Antique', sans-serif;
+}
+
+.fourth-container .fourth-flex .fourth-middle {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.fourth-container .fourth-flex .fourth-middle h2 {
+  margin: 6% 0%;
+}
+
+.fourth-container .fourth-flex .fourth-middle p {
+  margin-left: 24%;
+  width: 50%;
+  font-family: 'Shippori Antique', sans-serif;
+}
+
+.fourth-container .fourth-flex .fourth-right {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.fourth-container .fourth-flex .fourth-right h2 {
+  margin: 8% 0%;
+}
+
+.fourth-container .fourth-flex .fourth-right p {
+  margin-left: 26%;
+  width: 50%;
+  font-family: 'Shippori Antique', sans-serif;
+}
+
+.fifth-container {
+  margin-top: 8%;
+}
+
+.fifth-container .fifth-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fifth-container .fifth-flex img {
+  width: 25%;
+}
+
+.footer-container {
+  background-color: #90D4C5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.footer-container .footer-heading {
+  margin-left: 1%;
+  font-size: 18px;
+  font-family: 'Shippori Antique', sans-serif;
+  color: #2D7465;
+}
+
+.footer-container .footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-container .footer-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-container .footer-links ul li {
+  list-style: none;
+}
+
+.footer-container .footer-links ul li a {
+  color: #2D7465;
+  text-decoration: none;
+  font-family: 'Shippori Antique', sans-serif;
+  font-size: 18px;
+  letter-spacing: 3px;
+  padding: 10px;
+}
+
+.footer-container .footer-social {
+  margin-left: 1%;
+}
+
+.footer-container .footer-social img {
+  margin: 20% 0%;
+  padding: 1px;
+  width: 20%;
+}
+
+@media (max-width: 1200px) {
+  #header nav #brand {
+    margin-left: 4%;
+    font-size: 16px;
+  }
+  #header nav #menu {
+    float: left;
+    left: 40%;
+    position: relative;
+  }
+  #header nav #menu li {
+    display: inline-block;
+    padding: 0px 10px;
+    cursor: pointer;
+    line-height: 46px;
+    position: relative;
+  }
+  #header nav #menu li a {
+    font-size: 16px;
+  }
+  #header .main {
+    font-size: 64px;
+    margin-top: -18%;
+  }
+  #header .arrow {
+    margin-top: 60px;
+  }
+  .second-container .one-flex .one-left .heading {
+    padding: 10vh 12vh;
+  }
+  .second-container .one-flex .one-left .heading h2 {
+    width: 80%;
+    font-size: 36px;
+  }
+  .second-container .one-flex .one-left .heading p {
+    width: 100%;
+  }
+  .second-container .one-flex .one-right img {
+    width: 100%;
+  }
+  .second-container .two-flex .two-left img {
+    width: 100%;
+  }
+  .second-container .two-flex .two-right {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .second-container .two-flex .two-right .heading {
+    padding: 4vh 12vh;
+  }
+  .second-container .two-flex .two-right .heading h2 {
+    width: 80%;
+    font-size: 36px;
+  }
+  .second-container .two-flex .two-right .heading p {
+    width: 100%;
+  }
+  .third-container .third-flex img {
+    width: 50%;
+  }
+  .fourth-container .fourth-flex .fourth-left p {
+    margin: 13% 5%;
+    width: 90%;
+    font-size: 16px;
+  }
+  .fourth-container .fourth-flex .fourth-middle p {
+    margin: 13% 5%;
+    width: 90%;
+    font-size: 16px;
+  }
+  .fourth-container .fourth-flex .fourth-right p {
+    margin: 13% 5%;
+    width: 90%;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 800px) {
+  #header nav #brand {
+    margin-left: 4%;
+    font-size: 16px;
+  }
+  #header nav #menu {
+    float: left;
+    left: 24%;
+    position: relative;
+  }
+  #header nav #menu li {
+    display: inline-block;
+    padding: 0px 10px;
+    cursor: pointer;
+    line-height: 46px;
+    position: relative;
+  }
+  #header nav #menu li a {
+    font-size: 16px;
+  }
+  #header .main {
+    font-size: 60px;
+  }
+  #header .arrow {
+    margin-top: 60px;
+  }
+  .second-container .one-flex .one-left .heading {
+    padding: 0vh 12vh;
+  }
+  .second-container .one-flex .one-left .heading h2 {
+    width: 100%;
+    font-size: 32px;
+  }
+  .second-container .one-flex .one-left .heading p {
+    width: 130%;
+  }
+  .second-container .one-flex .one-right img {
+    width: 100%;
+  }
+  .second-container .two-flex .two-left img {
+    width: 100%;
+  }
+  .second-container .two-flex .two-right {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .second-container .two-flex .two-right .heading {
+    margin-top: -4%;
+    padding: 0vh 12vh;
+  }
+  .second-container .two-flex .two-right .heading h2 {
+    width: 100%;
+    font-size: 32px;
+  }
+  .second-container .two-flex .two-right .heading p {
+    width: 130%;
+  }
+  .third-container .third-flex img {
+    width: 50%;
+  }
+  .fourth-container .fourth-flex .fourth-left p {
+    margin: 13% 5%;
+    width: 90%;
+    font-size: 16px;
+  }
+  .fourth-container .fourth-flex .fourth-middle p {
+    margin: 11% 5%;
+    width: 90%;
+    font-size: 16px;
+  }
+  .fourth-container .fourth-flex .fourth-right p {
+    margin: 13% 5%;
+    width: 90%;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  #header #resize #menu li a {
+    font-size: 20px;
+  }
+  #header nav #brand {
+    font-size: 18px;
+    line-height: 34px;
+    margin-left: 18px;
+  }
+  #header nav #menu {
+    display: none;
+  }
+  #header #toggle {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 6px;
+  }
+  #header #menu a {
+    font-family: "Poppins";
+    font-weight: 200;
+    font-size: 20px;
+  }
+  #header .main {
+    margin-top: -55%;
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 4px;
+  }
+  #header .arrow {
+    margin-top: 60px;
+  }
+  .second-container .one-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .second-container .one-flex .one-left {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .second-container .one-flex .one-left .heading {
+    padding: 6vh 12vh;
+    text-align: center;
+  }
+  .second-container .one-flex .one-left .heading h2 {
+    width: 100%;
+    font-size: 36px;
+  }
+  .second-container .one-flex .one-left .heading p {
+    width: 100%;
+  }
+  .second-container .one-flex .one-right {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .second-container .one-flex .one-right img {
+    width: 100%;
+  }
+  .second-container .two-flex {
+    display: block;
+  }
+  .second-container .two-flex .two-left {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .second-container .two-flex .two-left img {
+    width: 100%;
+  }
+  .second-container .two-flex .two-right {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .second-container .two-flex .two-right .heading {
+    padding: 6vh 12vh;
+    text-align: center;
+  }
+  .second-container .two-flex .two-right .heading h2 {
+    width: 100%;
+    font-size: 36px;
+  }
+  .second-container .two-flex .two-right .heading p {
+    width: 100%;
+  }
+  .third-container .third-flex {
+    display: block;
+  }
+  .third-container .third-flex img {
+    width: 100%;
+  }
+  .fourth-container h3 {
+    margin: 6% 0%;
+    font-family: 'Shippori Antique', sans-serif;
+    color: gray;
+    font-size: 26px;
+    letter-spacing: 3px;
+    text-align: center;
+  }
+  .fourth-container .fourth-flex {
+    display: block;
+    text-align: center;
+  }
+  .fourth-container .fourth-flex .fourth-left {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .fourth-container .fourth-flex .fourth-left p {
+    margin-left: 5%;
+    width: 90%;
+    font-size: 20px;
+  }
+  .fourth-container .fourth-flex .fourth-middle {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .fourth-container .fourth-flex .fourth-middle p {
+    margin-left: 10%;
+    width: 80%;
+    font-size: 20px;
+  }
+  .fourth-container .fourth-flex .fourth-right {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .fourth-container .fourth-flex .fourth-right p {
+    margin-left: 5%;
+    width: 90%;
+    font-size: 20px;
+  }
+  .fifth-container .fifth-flex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .fifth-container .fifth-flex img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 400px) {
+  #header .main {
+    margin-top: -55%;
+    font-size: 56px;
+    text-align: center;
+    letter-spacing: 4px;
+  }
+}
+
+@media (max-width: 360px) {
+  #header .main {
+    margin-top: -55%;
+    font-size: 48px;
+    text-align: center;
+    letter-spacing: 4px;
+  }
+  .footer-container .footer-heading {
+    margin-left: 4%;
+    font-size: 16px;
+    font-family: 'Shippori Antique', sans-serif;
+    color: #2D7465;
+  }
+  .footer-container .footer-links ul li a {
+    font-size: 17px;
+    padding: 6px;
+  }
+  .footer-container .footer-social {
+    margin-left: 1%;
+  }
+  .footer-container .footer-social img {
+    margin: 20% 0%;
+    padding: 1px;
+    width: 20%;
+  }
+}
+/*# sourceMappingURL=index.css.map */
